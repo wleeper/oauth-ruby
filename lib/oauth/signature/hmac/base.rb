@@ -9,7 +9,7 @@ module OAuth::Signature::HMAC
   private
     def digest
       self.class.digest_class Object.module_eval("::Digest::#{self.class.digest_klass}")
-      Digest::HMAC.digest(signature_base_string, secret, self.class.digest_class)
+      Digest::HMAC.new(secret, self.class.digest_class).digest(signature_base_string)
     end
   end
 end
