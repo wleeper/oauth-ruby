@@ -6,6 +6,8 @@ This is a RubyGem for implementing both OAuth clients and servers in Ruby applic
 
 See the OAuth specs http://oauth.net/core/1.0/
 
+This version is modified to work around a bug in JRuby 1.4.1 through 1.5.3.  The bug is fixed in the Master for JRuby 1.6.0
+
 == Installing
 
   sudo gem install oauth
